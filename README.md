@@ -1,5 +1,5 @@
 # duck-converter
-Convert common metrics to duck.
+Convert common metrics to duck 🦆
 
 ## Overview
 Have you ever found yourself wondering any of the following questions:
