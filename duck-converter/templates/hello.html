@@ -1,0 +1,67 @@
+<!-- <title>Duck Converter</title>
+
+<form>
+
+  <label for="cars">Choose the measurement category you'd like to convert to ducks 🦆:</label><br><br>
+  <select id="cars">
+    <option value="mass">Mass</option>
+    <option value="time">Time</option>
+    <option value="length">Length</option>
+    <option value="height">Height</option>
+    <option value="volume">Volume</option>
+    <option value="storage">Data Storage</option>
+    <option value="temperature">Temperature</option>
+  </select><br><br>
+  <label for="amount">Amount</label><br>
+  <input type="text" id="amount"><br>
+
+  <input type="submit" value="Submit">
+</form>
+ -->
+
+
+
+<!--  <title>Reusable Form Demo</title>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul>
+{% for message in messages %}
+  <li>{ { message[1] }}</li>
+{% endfor %}</ul>
+{% endif %}
+{% endwith %}
+<form action="" method="post">
+            &#123; &#123; form.csrf &#125;&#125;
+<div class="input text">
+{ { form.name.label }} { { form.name }}</div>
+><div class="input submit">
+                <input type="submit" value="Submit"></div>
+</form -->
+
+
+
+<!doctype html>
+<title>Duck Converter</title>
+<form action="" method="post">
+
+  <label for="category">Choose the measurement category you'd like to convert to 🦆:</label><br><br>
+  <select id="category" required>
+    <option value="mass" >Mass</option>
+    <option value="time">Time</option>
+    <option value="length">Length</option>
+    <option value="height">Height</option>
+    <option value="volume">Volume</option>
+    <option value="storage">Data Storage</option>
+    <option value="temperature">Temperature</option>
+  </select><br><br>
+  <label for="units">Units:</label><br><br>
+  <input type="text" id="units" name="units" required><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+<h1>is roughly equivalent to {{ finalunits }} ducks !</h1>

@@ -1,0 +1,21 @@
+# python
+__pycache__/
+*.pyc
+
+# vim
+*.swo
+*.swp
+
+# windows
+*~
+
+# log files
+*.log
+log_file
+logfiles
+
+venv
+
+.DS_Store
+
+.idea
