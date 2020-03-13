@@ -29,13 +29,20 @@ class ReusableForm(Form):
     @app.route("/", methods=['GET', 'POST'])
     def hello():
         form = ReusableForm(request.form)
-    
+        
+        finalunits = 0
+
         print(form.errors)
         if request.method == 'POST':
             units=request.form['units']
-    
-        con = c.Converter()
-        finalunits = con.convert_mass(float(units), 'lb')
+            category=request.form['category']
+            #instantiate a Converter obj
+            con = c.Converter()
+            # converting their form input into the appropriate
+            # method of con that will be used for conversion
+            s = 'convert_' + category.replace(' ', '_').lower()
+            fn = getattr(con, s)
+            finalunits = fn(float(units), 'lb')
 
         if form.validate():
             # Save the comment here.

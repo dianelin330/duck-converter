@@ -52,7 +52,7 @@ class Converter:
         return sqinches/310.5
 
 
-    def convert_storage(self, amount, unit):
+    def convert_data_storage(self, amount, unit):
         """This is calculated based on the following equation:
         150 lbs = average human weight
         55 TB = average human brain capacity
@@ -65,7 +65,7 @@ class Converter:
         return tb/0.934999
 
 
-    def convert_temp(self, amount, unit):
+    def convert_temperature(self, amount, unit):
 
         temp = TemperatureUnit(amount, unit, 'F').doconvert()
         return temp/107.5

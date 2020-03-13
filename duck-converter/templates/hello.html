@@ -42,11 +42,16 @@
 
 
 <!doctype html>
-<title>Duck Converter</title>
+<title>Duck Yeah</title>
+<h1>Welcome to the Duck Converter 🦆</h1><br>
+
+
 <form action="" method="post">
 
-  <label for="category">Choose the measurement category you'd like to convert to 🦆:</label><br><br>
-  <select id="category" required>
+  <label for="category">
+    Choose the measurement category you'd like to convert to ducks:
+  </label><br>
+  <select id="category" name="category" required>
     <option value="mass" >Mass</option>
     <option value="time">Time</option>
     <option value="length">Length</option>
@@ -54,14 +59,14 @@
     <option value="volume">Volume</option>
     <option value="storage">Data Storage</option>
     <option value="temperature">Temperature</option>
-  </select><br><br>
-  <label for="units">Units:</label><br><br>
+  </select><br><br><br>
+  <label for="units">Units:</label><br>
   <input type="text" id="units" name="units" required><br><br>
   <input type="submit" value="Submit">
+
 </form>
 
 
-
-
-
-<h1>is roughly equivalent to {{ finalunits }} ducks !</h1>
+{% if finalunits %}
+  <h1>is roughly equivalent to {{ finalunits }} ducks !</h1>
+{% endif %}
