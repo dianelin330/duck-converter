@@ -1,53 +1,117 @@
-<!-- <title>Duck Converter</title>
-
-<form>
-
-  <label for="cars">Choose the measurement category you'd like to convert to ducks 🦆:</label><br><br>
-  <select id="cars">
-    <option value="mass">Mass</option>
-    <option value="time">Time</option>
-    <option value="length">Length</option>
-    <option value="height">Height</option>
-    <option value="volume">Volume</option>
-    <option value="storage">Data Storage</option>
-    <option value="temperature">Temperature</option>
-  </select><br><br>
-  <label for="amount">Amount</label><br>
-  <input type="text" id="amount"><br>
-
-  <input type="submit" value="Submit">
-</form>
- -->
-
-
-
-<!--  <title>Reusable Form Demo</title>
-
-{% with messages = get_flashed_messages(with_categories=true) %}
-{% if messages %}
-<ul>
-{% for message in messages %}
-  <li>{ { message[1] }}</li>
-{% endfor %}</ul>
-{% endif %}
-{% endwith %}
-<form action="" method="post">
-            &#123; &#123; form.csrf &#125;&#125;
-<div class="input text">
-{ { form.name.label }} { { form.name }}</div>
-><div class="input submit">
-                <input type="submit" value="Submit"></div>
-</form -->
-
-
-
 <!doctype html>
 <title>Duck Yeah</title>
 <h1>Welcome to the Duck Converter 🦆</h1><br>
 
+  <head>
+      <script language="javascript">
+          var x = 0;
+
+          function displayUnits(x) {
+              if(x == 1) {
+                  document.getElementById("mass_id").style.visibility="visible";
+              }
+              if(x == 2)  {
+                  document.getElementById("time_id").style.visibility="visible";
+              }
+              if(x == 3)  {
+                  document.getElementById("length_id").style.visibility="visible";
+              }
+              if(x == 4)  {
+                  document.getElementById("height_id").style.visibility="visible";
+              }
+              if(x == 5)  {
+                  document.getElementById("cont5").style.visibility="visible";
+              }
+              if(x == 6)  {
+                  document.getElementById("cont6").style.visibility="visible";
+              }
+              if(x == 7)  {
+                  document.getElementById("cont7").style.visibility="visible";
+              }
+          }
+      </script>
+  </head>
 
 <form action="" method="post">
 
+
+
+
+  <input type="button" onclick="displayUnits(1)" value="Mass" id="mass">
+  <div id="mass_id" style='visibility:hidden'>
+    <select id="category" name="category" required>
+      <option value="mg" >Milligram</option>
+      <option value="g">Gram</option>
+      <option value="oz">Ounce</option>
+      <option value="lb">Pound</option>
+      <option value="kg">Kilogram</option>
+    </select>
+  </div><br><br>
+
+  <input type="button" onclick="displayUnits(2)" value="Time" id="time">
+  <div id="time_id" style='visibility:hidden'>
+    <select id="category" name="category" required>
+      <option value="ms" >Millisecond</option>
+      <option value="sec">Second</option>
+      <option value="min">Minute</option>
+      <option value="hr">Hour</option>
+      <option value="day">Day</option>
+      <option value="wk">Week</option>
+      <option value="mo">Month</option>
+      <option value="yr">Year</option>
+    </select>
+  </div><br><br>
+
+  <input type="button" onclick="displayUnits(3)" value="Length" id="length">
+  <div id="length_id" style='visibility:hidden'>
+    <select id="category" name="category" required>
+      <option value="mm" >Millimeter</option>
+      <option value="cm">Centimer</option>
+      <option value="in">Inch</option>
+      <option value="ft">Feet</option>
+      <option value="yd">Yard</option>
+      <option value="m">Meter</option>
+      <option value="km">Kilometer</option>
+      <option value="mi">Mile</option>
+    </select>
+  </div><br><br>
+
+  <input type="button" onclick="displayUnits(4)" value="Height" id="height">
+  <div id="height_id" style='visibility:hidden'>
+    <select id="category" name="category" required>
+      <option value="mm" >Millimeter</option>
+      <option value="cm">Centimer</option>
+      <option value="in">Inch</option>
+      <option value="ft">Feet</option>
+      <option value="yd">Yard</option>
+      <option value="m">Meter</option>
+      <option value="km">Kilometer</option>
+      <option value="mi">Mile</option>
+    </select>
+  </div><br><br>
+
+  <!-- FINISH DOING THIS  -->
+  <input type="button" onclick="displayUnits(5)" value="Volume" id="volume">
+  <div id="volume_id" style='visibility:hidden'>
+    <select id="category" name="category" required>
+      <option value="mm" >Millimeter</option>
+      <option value="cm">Centimer</option>
+      <option value="in">Inch</option>
+      <option value="ft">Feet</option>
+      <option value="yd">Yard</option>
+      <option value="m">Meter</option>
+      <option value="km">Kilometer</option>
+      <option value="mi">Mile</option>
+    </select>
+  </div><br><br>
+
+
+
+
+</form>
+
+
+<!-- <form action="" method="post">
   <label for="category">
     Choose the measurement category you'd like to convert to ducks:
   </label><br>
@@ -60,11 +124,23 @@
     <option value="storage">Data Storage</option>
     <option value="temperature">Temperature</option>
   </select><br><br><br>
-  <label for="units">Units:</label><br>
+  <label for="category">
+    Choose the unit you'd like to convert to ducks:
+  </label><br>
+  <select id="category" name="category" required>
+    <option value="mass" >Mass</option>
+    <option value="time">Time</option>
+    <option value="length">Length</option>
+    <option value="height">Height</option>
+    <option value="volume">Volume</option>
+    <option value="storage">Data Storage</option>
+    <option value="temperature">Temperature</option>
+  </select><br><br><br>  <label for="units">Units:</label><br>
   <input type="text" id="units" name="units" required><br><br>
   <input type="submit" value="Submit">
+</form> -->
 
-</form>
+
 
 
 {% if finalunits %}

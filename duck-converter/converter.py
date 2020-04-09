@@ -1,12 +1,11 @@
 """Master converter class containing all conversion logic"""
 
 # TODO:
-# X finish creating all the convert methods
-# X find volume of duck
+# - conditionally render the html
+# - make ui, add CSS!
 # - print duck emojis
-# - make flask app and endpoints
-# - make ui
-# - add other conversions not in the unitconvert module?
+# - finish makig flask app and endpoints
+
 import emoji
 
 from unitconvert.massunits import MassUnit

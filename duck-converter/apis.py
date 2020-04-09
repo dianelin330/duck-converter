@@ -20,8 +20,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'j3kd93wks9202kedjdjemejk3i393409'
 app.config["JSON_SORT_KEYS"] = False
 
-con = c.Converter()
-
 
 class ReusableForm(Form):
     # name = TextField('Name:', validators=[validators.required()])
@@ -36,7 +34,7 @@ class ReusableForm(Form):
         if request.method == 'POST':
             units=request.form['units']
             category=request.form['category']
-            #instantiate a Converter obj
+            # instantiate a Converter obj
             con = c.Converter()
             # converting their form input into the appropriate
             # method of con that will be used for conversion
